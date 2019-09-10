@@ -16,14 +16,14 @@ typedef enum {
 } ParseError;
 
 typedef struct SqliteHeaderData {
-	char header_str[16];
+	unsigned char header_str[16];
 	uint16_t page_size_bytes;
-	char file_format_write_version;
-	char file_format_read_version;
-	char reserved_space_bytes;
-	char max_embedded_payload_frac;
-	char min_embedded_payload_frac;
-	char leaf_payload_frac;
+	unsigned char file_format_write_version;
+	unsigned char file_format_read_version;
+	unsigned char reserved_space_bytes;
+	unsigned char max_embedded_payload_frac;
+	unsigned char min_embedded_payload_frac;
+	unsigned char leaf_payload_frac;
 	uint32_t file_change_counter;
 	uint32_t database_size_pages;
 	uint32_t first_freelist_trunk_page;
@@ -34,7 +34,7 @@ typedef struct SqliteHeaderData {
 	uint32_t largest_b_tree_page_number;
 	uint32_t database_text_encoding;
 	uint32_t user_version;
-	bool incremental_vaccum_mode;
+	uint32_t incremental_vaccum_mode;
 	uint32_t application_id;
 	uint32_t version_valid_for;
 	uint32_t sqlite_version;
