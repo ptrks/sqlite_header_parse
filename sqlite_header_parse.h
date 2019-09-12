@@ -1,5 +1,5 @@
-#ifndef SQLITE_HEADER_PARSE_H
-#define SQLITE_HEADER_PARSE_H
+#ifndef SQLITE_HEADER_H
+#define SQLITE_HEADER_H
 
 #include <stdio.h>
 #include <stdint.h>
@@ -41,7 +41,7 @@ typedef struct SqliteHeaderData {
 } SqliteHeaderData;
 
 static ParseError 
-get_header_information(const char *database_file, struct SqliteHeaderData *d) {
+sqlite_header_parse(const char *database_file, struct SqliteHeaderData *d) {
 	
 	FILE *fp;
 	size_t bytes_read = 0;
