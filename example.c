@@ -8,7 +8,7 @@ int main()
 
 	struct SqliteHeaderData s;
 
-	ParseError e = sqlite_header_parse("../test", &s);
+	ParseError e = sqlite_header_parse("../example_database.db", &s);
 	
 	if (e == NO_ERROR) {
 		printf("Header string: %s\n", s.header_str);
