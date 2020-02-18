@@ -1,6 +1,8 @@
 # SQLite Header Parse
 Simple C header only library for parsing information from SQLite database headers.
 
+[![Build Status](https://travis-ci.com/patrick--/sqlite_header_parse.svg?branch=master)](https://travis-ci.com/patrick--/sqlite_header_parse)
+
 ---
 ### Overview
 SQLite database files have quite a bit of information contained within their header. While plenty of SQLite wrapper libraries exist, I've found myself rewriting these header parsing operations several times - so I decided to put together a tiny reusable library. 
